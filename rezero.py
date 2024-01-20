@@ -32,7 +32,7 @@ class ReZero(nn.Module):
 
         super().__init__()
 
-        self.alpha = nn.Parameter(torch.zeros(embedding_dimension))
+        self.alpha = nn.Parameter(torch.tensor(1e-3))
         self.module = module
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
